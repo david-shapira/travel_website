@@ -1,0 +1,274 @@
+/* styles.css */
+/* כללים כלליים */
+:root{
+  --bg:#ffffff;
+  --text:#0f1724;
+  --accent:#d9413a;    /* אדום נפאלי */
+  --muted:#6b7280;
+  --container-w:1100px;
+  --gap:20px;
+  --radius:8px;
+  --max-width-mobile:768px;
+  --header-height:72px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height:1.45;
+  color:var(--text);
+  background:var(--bg);
+}
+
+/* קונטיינר לרוחב מסודר */
+.container{
+  max-width:var(--container-w);
+  padding:0 20px;
+  box-sizing:border-box;
+}
+
+/* Header */
+.site-header{
+  border-bottom:1px solid #eef2f6;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.header-inner{
+  height:var(--header-height);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* לוגו קטן */
+.brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.logo{
+  width:56px;
+  height:56px;
+  object-fit:contain;
+  display:block;
+}
+
+/* ניווט */
+.nav-list{
+  display:flex;
+  gap:18px;
+  list-style:none;
+  align-items:center;
+}
+
+.nav-link{
+  text-decoration:none;
+  color:var(--muted);
+  padding:8px 12px;
+  border-radius:6px;
+  font-weight:600;
+  font-size:15px;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+  color:var(--text);
+  background:rgba(0,0,0,0.03);
+  outline:none;
+}
+
+.nav-link.active{
+  color:var(--accent);
+  background:rgba(217,65,58,0.08);
+}
+
+/* Hero */
+.hero{
+  padding:28px 0;
+  background:linear-gradient(180deg,#fbfdff 0%, #f7fbff 100%);
+  border-bottom:1px solid #f1f5f9;
+}
+
+.hero-inner{
+  display:flex;
+  gap:var(--gap);
+  align-items:center;
+  padding:24px 0;
+}
+
+/* טקסט היילייט */
+.hero-text h1{
+  margin:0 0 10px 0;
+  font-size:28px;
+}
+
+.hero-text p{
+  margin:0 0 10px 0;
+  color:var(--muted);
+}
+
+/* תמונת באנר */
+.hero-image img{
+  width:320px;
+  max-width:40vw;
+  height:auto;
+  border-radius:10px;
+  display:block;
+  object-fit:cover;
+  box-shadow: 0 6px 18px rgba(3,15,25,0.08);
+}
+
+/* כרטיסיות - Flexbox מרכזי */
+.cards-section{
+  padding:36px 0;
+}
+
+.section-title{
+  margin:0 0 18px 0;
+  font-size:20px;
+}
+
+.cards{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  justify-content:space-between;
+}
+
+/* כרטיס יחיד */
+.card{
+  background:#fff;
+  border:1px solid #eef2f6;
+  border-radius:var(--radius);
+  overflow:hidden;
+  width:100%;
+  max-width:360px;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+}
+
+.card-img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+}
+
+.card-body{
+  padding:14px;
+}
+
+.card-title{
+  margin:0 0 8px 0;
+  font-size:16px;
+}
+
+.card-text{
+  margin:0 0 12px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.card-link{
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:700;
+  font-size:14px;
+}
+
+/* מידע נוסף */
+.info{
+  padding:28px 0 80px 0;
+}
+
+.tips-list{
+  margin:12px 0 0 0;
+  padding-left:18px;
+  color:var(--muted);
+}
+
+/* Footer */
+.site-footer{
+  border-top:1px solid #eef2f6;
+  background:#fff;
+  padding:18px 0;
+}
+
+.footer-inner{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* התאמות למובייל (media query) */
+@media (max-width: 768px){
+  .hero-inner{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .hero-image img{
+    width:100%;
+    max-width:540px;
+    height:220px;
+  }
+
+  .nav-list{
+    flex-direction:column;
+    gap:8px;
+    background:#fff;
+    padding:12px;
+    border-radius:8px;
+    box-shadow:none;
+  }
+
+  .header-inner{
+    flex-direction:column;
+    gap:8px;
+    height:auto;
+    padding:10px 0;
+  }
+
+  .cards{
+    flex-direction:column;
+  }
+
+  .card{
+    max-width:100%;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+/* עוד כללים קטנים לנראות */
+a{ color:inherit; }
+img{ display:block; max-width:100%; }
+
+.gallery-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:30px 0;
+}
+
+.gallery-item{
+  width:calc(33.33% - 12px);
+  border-radius:8px;
+  object-fit:cover;
+  height:200px;
+}
+
+@media(max-width:768px){
+  .gallery-item{
+    width:100%;
+    height:220px;
+  }
+}

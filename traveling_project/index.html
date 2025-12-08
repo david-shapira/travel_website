@@ -1,0 +1,102 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NepVenture — מסעות ונפאל</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header אחיד עם לוגו ותפריט ניווט -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logoMin.png" alt="site logo" class="logo">
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="routes.html" class="nav-link">מסלולים</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero: כותרת, תיאור ותמונה -->
+  <main>
+    <section class="hero">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1>נפאל — שער להימלאיה</h1>
+          <p>טרקים מלאי אתגר פסגות מושלגות חוויות תרבותיות בחר מסלול, התכונן, וצא למסע.</p>
+          <p class="cta">התחל בעמוד 'מסלולים' כדי לבחור מסלול.</p>
+        </div>
+        <figure class="hero-image" aria-hidden="true">
+          <img src="hero.jpeg" alt="נוף להימלאיה" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="cards-section container">
+      <h2 class="section-title">מסלולים מומלצים</h2>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <img src="ebc.jpeg" alt="Everest Base Camp" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Everest Base Camp</h3>
+            <p class="card-text">מסלול של 12–14 ימים. אתגר לגובה. נופים דרמטיים ותרבות שיילי.</p>
+            <a href="routes.html#ebc" class="card-link">למידע נוסף</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <img src="annapurna.jpeg" alt="Annapurna Circuit" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Annapurna Circuit</h3>
+            <p class="card-text">מסלול מגוון. נופים ירוקים, כפרים מסורתיים ונקודות תצפית.</p>
+            <a href="routes.html#annapurna" class="card-link">למידע נוסף</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <img src="langtang.jpeg" alt="Langtang Trek" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Langtang</h3>
+            <p class="card-text">מסלול קצר וירוק. מתאים למי שמחפש מסלול פחות צפוף.</p>
+            <a href="routes.html#langtang" class="card-link">למידע נוסף</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- קטע מידע קצר נוסף -->
+    <section class="info container">
+      <h2 class="section-title">טיפים מהשטח</h2>
+      <ul class="tips-list">
+        <li>הקדש ימים נוספים להסתגלות לגובה.</li>
+        <li>לבש שכבות. הלילה קר והיום שמשי.</li>
+        <li>בחר מדריך מקומי מוסמך במסלולים הארוכים.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer אחיד -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p>© 2025 NepVenture</p>
+      </div>
+      <div class="footer-col">
+        <p>Contact: info@nepventure.example</p>
+      </div>
+      <div class="footer-col">
+        <p>Website by David</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
