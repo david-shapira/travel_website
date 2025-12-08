@@ -94,7 +94,20 @@
   gap:var(--gap);
   align-items:center;
   padding:24px 0;
+  background-image: url("background.jpg"); /* הנתיב לתמונה */
+  background-size: cover; /* שהתמונה תכסה את כל השטח */
+  background-position: center; /* שהאמצע יהיה ממורכז */
+  height: 50vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg); /* טקסט ברור */
+  text-shadow: 0 0 10px black;
+  border-radius: var(--radius);
+
 }
+
 
 /* טקסט היילייט */
 .hero-text h1{
@@ -104,18 +117,7 @@
 
 .hero-text p{
   margin:0 0 10px 0;
-  color:var(--muted);
-}
-
-/* תמונת באנר */
-.hero-image img{
-  width:320px;
-  max-width:40vw;
-  height:auto;
-  border-radius:10px;
-  display:block;
-  object-fit:cover;
-  box-shadow: 0 6px 18px rgba(3,15,25,0.08);
+  color:var(--bg);
 }
 
 /* כרטיסיות - Flexbox מרכזי */
@@ -132,7 +134,7 @@
   display:flex;
   gap:18px;
   align-items:flex-start;
-  justify-content:space-between;
+  justify-content:space-around;
 }
 
 /* כרטיס יחיד */
@@ -210,12 +212,14 @@
   .hero-inner{
     flex-direction:column-reverse;
     text-align:center;
+    
   }
 
   .hero-image img{
     width:100%;
     max-width:540px;
     height:220px;
+
   }
 
   .nav-list{
