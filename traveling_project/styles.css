@@ -5,7 +5,7 @@
   --text:#0f1724;
   --accent:#d9413a;    /* אדום נפאלי */
   --muted:#6b7280;
-  --container-w:1100px;
+  --container-w:max-width;
   --gap:20px;
   --radius:8px;
   --max-width-mobile:768px;
